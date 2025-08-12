@@ -6,7 +6,7 @@
 
 - [蓝奏云下载](https://ycww.lanzn.com/b00wmittna) 密码:`550W`  
 
-- [Gitee下载](https://gitee.com/heigxaon/moss-android-terminal/repository/archive/master.zip)  
+- [Gitee下载](https://gitee.com/heigxaon/moss-android-terminal/archive/refs/tags/MOSS.zip)  
 
 - [GitHub下载](https://github.com/Heigxaon/MOSS_terminal/archive/refs/heads/main.zip)  
 
