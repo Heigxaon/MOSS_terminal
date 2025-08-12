@@ -4,11 +4,11 @@
 - QQ群：768464439  
 安卓QQ群下载的文件路径：`/storage/emulated/0/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/`  
 
-- [蓝奏云](https://ycww.lanzn.com/b00wmittna) 密码:`550W`  
+- [蓝奏云下载](https://ycww.lanzn.com/b00wmittna) 密码:`550W`  
 
-- [Gitee](https://gitee.com/heigxaon/moss-android-terminal)  
+- [Gitee下载](https://gitee.com/heigxaon/moss-android-terminal/repository/archive/master.zip)  
 
-- [GitHub](https://github.com/Heigxaon/MOSS_terminal)  
+- [GitHub下载](https://github.com/Heigxaon/MOSS_terminal/archive/refs/heads/main.zip)  
 
 > 如果有4个`MOSS.tar.gz`包，需要合并  
 在MT管理器 **批量选中** 这4个文件， **长按 - 工具 - 文件合并** ，将合并后的文件改名为`MOSS.tar.gz`
