@@ -8,7 +8,7 @@
 
 - [Gitee下载](https://gitee.com/heigxaon/moss-android-terminal/archive/refs/tags/MOSS.zip)  
 
-- [GitHub下载](https://github.com/Heigxaon/MOSS_terminal/archive/refs/heads/main.zip)  
+- [GitHub下载](https://github.com/Heigxaon/MOSS_terminal/archive/refs/tags/MOSS.zip)  
 
 > 如果有4个`MOSS.tar.gz`包，需要合并  
 在MT管理器 **批量选中** 这4个文件， **长按 - 工具 - 文件合并** ，将合并后的文件改名为`MOSS.tar.gz`
