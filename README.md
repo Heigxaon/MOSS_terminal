@@ -1,4 +1,4 @@
-![预览](1.jpeg)
+![预览](https://gitee.com/heigxaon/moss-android-terminal/raw/master/1.jpeg)
 
 [MOSS│安卓终端多功能AI（自制/附教程）-哔哩哔哩](https://b23.tv/jL0tN9M)  
 [【MOSS】安卓 | AI对话 | 多功能终端 | QQ机器人 ✨-哔哩哔哩](https://b23.tv/0WPsOvI)
@@ -94,7 +94,7 @@ yes | termux-setup-storage && ln -sfn /sdcard/Documents ~/storage/documents && e
 <br>
 <br>
 # AI设置
-- 官方API调用参数设置
+- 官方API调用参数设置 [DeepSeekAPI文档](https://api-docs.deepseek.com/zh-cn/api/create-chat-completion)
 > 包括 **系统提示词、风格、上下文记忆量、最大token、思维离散度...**
 
 ---
@@ -414,3 +414,4 @@ QQ获取前台消息原理是：捕获当前界面的最后一条消息，所以
 }
 ```
 - 所有示例见 `固定回复.json` 文件
+
