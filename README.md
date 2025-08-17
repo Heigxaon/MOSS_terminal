@@ -10,25 +10,27 @@
 <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=QaC5Qm_UnfHrKgddQmATgVf1j3CwBqUq&jump_from=webapi&authKey=QOb/Qy19dPFM3ZR25OE0YugdfmXiw7W/ZB6fXCh+mdF4OJhh3QYowaLY5FlAYMdX"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="UEG" title="UEG"></a>  
 安卓QQ群下载的文件路径：`/storage/emulated/0/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/`
 
-- [百度网盘下载](https://pan.baidu.com/s/1VrXs5mtzslIk33K4NdVxIA?pwd=550W)&nbsp;&nbsp;提取码:`550W`
+- [123云盘下载](https://www.123912.com/s/LYy1jv-rPL03)&nbsp;&nbsp;_🚀极速_
 
-- [123网盘下载](https://www.123912.com/s/LYy1jv-RgL03)&nbsp;&nbsp;_🚀速度快，需登陆_
+- [百度网盘下载](https://pan.baidu.com/s/1HGgIlsSh0LCGMRTwQVHeug?pwd=550W)&nbsp;&nbsp;提取码:`550W`
 
-- [蓝奏云下载](https://ycww.lanzn.com/b00wmittna)&nbsp;&nbsp;密码:`550W` _🚀速度快，无需登陆_
+- [蓝奏云下载](https://ycww.lanzn.com/b00wmittna)&nbsp;&nbsp;密码:`550W` _高速，无需登陆_
 
-- [Gitee下载](https://gitee.com/heigxaon/moss-android-terminal/archive/refs/tags/MOSS.zip)&nbsp;&nbsp;_本站下载，需登陆_
+- [Gitee下载](https://gitee.com/heigxaon/moss-android-terminal/repository/archive/master.zip)&nbsp;&nbsp;_本站高速，需登陆_
 
-- [GitHub下载](https://github.com/Heigxaon/MOSS_terminal/archive/refs/tags/MOSS.zip)&nbsp;&nbsp;_无需登陆_
+- [GitHub下载](https://github.com/Heigxaon/MOSS_terminal/archive/refs/heads/main.zip)&nbsp;&nbsp;_低速，无需登陆_
 
-> :tw-203c: **如果不是前两个网盘下载，其中会有4个`MOSS.tar.gz`包，下载后需要合并** _（因为不能上传单个超过100M的文件，所以拆开上传）_  
-在[MT管理器](https://mt2.cn/download/)找到这4个文件，**横划**批量选中这4个， **长按 - 工具 - 文件合并** ，一定将合并后的文件命名为`MOSS.tar.gz`
+> :tw-203c: **后三个下载地址有4个`MOSS.tar.gz`分包，下载后需要合并** _（因为不能上传单个超过100M的文件，所以拆开上传）_  
+在[MT管理器](https://mt2.cn/download/)找到这4个文件，**横划**批量选中这4个， **长按 - 工具 - 文件合并 -  ⭐右上角排序  -  ⭐按名称1234的顺序  - 确定** ，一定将合并后的文件命名为`MOSS.tar.gz`  
+ _(注意：1234排序合并才有效)_ 
 
 
 <br>
 
 #### 安装步骤
 1. ⭐将这个的**300多M**的`MOSS.tar.gz`移动到`/storage/emulated/0/Documents/`路径下， **无需解压**
-> (若无此路径需手动创建，一般都有)
+> (若无此路径需手动创建，一般都有)  
+❗请确保`MOSS.tar.gz`在`Documents`里，完整路径是`/storage/emulated/0/Documents/MOSS.tar.gz`
 
 2. 所需软件  
  **[Termux](https://github.com/termux/termux-app/releases)** （必需）  
@@ -37,16 +39,30 @@
 [Autox](https://github.com/aiselp/AutoX/releases) （可选，用于消息自动回复）  
  **速度慢建议去 [蓝奏云下载](https://ycww.lanzn.com/b00wmittna)**&nbsp;&nbsp;密码:`550W`
 
-3. 开启Termux和Termux:API的所有权限，电池优化策略设为 **无限制**  
-创建Termux:Widget的桌面小部件（若需要）
+3. ⭐开启 **Termux** 和 **Termux:API** 的`自启动` `悬浮窗` `后台弹出界面`权限，省电策略设为`无限制`  
+开启 **Termux:Widget** 的`后台弹出界面`权限，创建 **Termux:Widget** 的桌面小部件（如果装了Termux:Widget）
 
-4. 用 **Termux** 执行：
+4. 以下整段复制，用 **Termux** 一次性执行：
 ```bash
-yes | termux-setup-storage && ln -sfn /sdcard/Documents ~/storage/documents && echo -n "▷ 回车继续" && read -n 1 && cd ~/storage/documents && tar -zxvf MOSS.tar.gz -C . && bash MOSS/setup.sh || exit
+yes | termux-setup-storage &&
+ln -sfn /sdcard/Documents ~/storage/documents &&
+echo -e "\n\n\033[42;97m▷ 回车继续\033[0m (全自动安装，约30秒)" &&
+read -n 1 &&
+cd ~/storage/documents &&
+tar -zxvf MOSS.tar.gz -C . &&
+tar -zxvf ~/storage/documents/MOSS/termux-backup.tar.gz -C $HOME/.. &&
+chmod -R 777 ~/.shortcuts &&
+chsh -s zsh &&
+clear &&
+termux-reload-settings &&
+termux-api-start &&
+read -n 1 -p "▷ 已安装完成，请回车退出，然后按MOSS键即可快速启动" ||
+echo -e "\033[41;97m▷ 错误终止\033[0m"
 ```
 若出现弹窗，请同意 **授予管理所有文件的权限**  
 
-:tw-2705: **安装完成，所有文件均在`.../Documents/MOSS/`里，其它可删除**  
+:tw-2705: **安装完成，所有文件均在`.../Documents/MOSS/`里**  
+ **_总结：把`MOSS.tar.gz`放到`.../Documents`之后，用Termux执行命令_**  
 <br>
 <br>
 # 基础使用
@@ -149,7 +165,7 @@ yes | termux-setup-storage && ln -sfn /sdcard/Documents ~/storage/documents && e
 
 #### 添加角色 方法2
 如果角色说明太长，不方便手动指令添加  
-在`Document/MOSS`目录创建`prompt_xxx`文件，`prompt_`是固定的，`xxx`是你的角色名，如`prompt_猫娘`  
+在`/MOSS/custom`目录创建`prompt_xxx`文件，`prompt_`是固定的，`xxx`是你的角色名，如`prompt_猫娘`  
 然后用文本编辑器打开，写入它的角色扮演说明保存即可
 
 ---
@@ -206,13 +222,15 @@ yes | termux-setup-storage && ln -sfn /sdcard/Documents ~/storage/documents && e
 <br>
 # 接入QQ机器人
 1. 下载Autox.js v7（以下简称`Autox`）
-- [蓝奏云下载](https://ycww.lanzn.com/b00wmittna) （注意：下载后把`.zip`后缀改为`.apk`再安装）
-- [GitHub下载](https://github.com/aiselp/AutoX/releases) （原发布地址，速度慢）
+- [GitHub下载](https://github.com/aiselp/AutoX/releases) 
+- [蓝奏云下载](https://ycww.lanzn.com/b00wmittna)
 
 2. 打开Autox应用，左上角，开启权限：**无障碍服务** 、**通知读取权限**、**前台服务**、**悬浮窗**、**后台弹出界面**、**允许通知**  
 3. 开启你要接入的应用的消息 **通知权限** （比如QQ，一定确保它的后台消息内容能在通知栏显示）  
 4. 使用指令`!pre`修改AI回复的前缀内容，默认是 **@MOSS** ，只有以 **@MOSS** 开头的消息才会被回复，你可以改成自己的，比如使用`!pre /`，就会回复以`/`开头的消息  
-5. 使用`!name auto`即可切换为自动回复模式，然后用Autox运行`消息自动化`脚本  
+5. 使用`!name auto`即可切换为自动回复模式，然后用Autox运行`消息自动化`脚本
+
+-  **_注意：确保QQ版本和脚本启动时显示的是同一版本（一般是最新版QQ），否则无法识别前台消息_**
 
 `[音量减]键`只是 **暂停/恢复** ，并不是关闭/重启  
 `[音量加]键`是 **显示/隐藏** 日志，默认关闭  
@@ -242,7 +260,7 @@ QQ获取前台消息原理是：捕获当前界面的最后一条消息，所以
 
 # 固定回复规则
  **此功能可用于设置QQ机器人的固定回复**  
-配置文件是`固定回复.json`，参照其中的模板进行编辑  
+配置文件是`custom/固定回复.json`，参照其中的模板进行编辑  
 
 格式是：  
 `"条件": ["回复内容"]`  
@@ -415,3 +433,136 @@ QQ获取前台消息原理是：捕获当前界面的最后一条消息，所以
 ```
 - 所有示例见 `固定回复.json` 文件
 
+<br>
+<br>
+
+# 自定义插件
+- 支持自己用python写功能、指令，实现真正的 **全员开发者** ，自给自足  
+- 路径是`/MOSS/custom`，此文件夹下的所有py文件，将在每次用户输入后依次运行
+
+ **无法使用import，以下库可以直接用**  
+`os` `io` `re` `sys` `time` `json` `random` `base64` `requests`  
+`threading` `subprocess` `Image` `copy` `shutil` `difflib`  
+`readline` `qrcode` `marshal` `signal`  
+from collections import `defaultdict`  
+from datetime import `datetime`, `timedelta`  
+from openai import `OpenAI`
+
+ **可访问的全局变量名：** 
+- 发送的内容：`prompt`
+- 群名: `title`
+- 发送者：`sender`
+- 原始消息：`_msg`
+- 发送消息函数：`send_chat(content, at=True)`  此函数在`!name auto`时生效
+- 图片像素化打印：pixel_art(image_path)
+
+⚠️ 指定相对路径时以MOSS主程序为参照，不以本文件为参照
+
+以下是示例：
+```python
+def get_nasa_apod():
+    """获取NASA每日天文图片"""
+    try:
+        url = f"https://api.nasa.gov/planetary/apod?api_key=dYhYcQOMYEcBQRf633t1LVhtQW7G8nQdKylipgiS"
+        response = requests.get(url)
+        data = response.json()
+        hdurl = data.get('hdurl')
+        print("\n\033[93m==== NASA 每日天文图片 ====\033[0m")
+        print(f"标题: \033[96m{data.get('title')}\033[0m")
+        print(f"日期: {data.get('date')}")
+        print(f"说明: \033[90m{data.get('explanation')}\033[0m")
+        print(f"图片: \033[4;94m{hdurl}\033[0m")
+        os.system(f'termux-open-url "{hdurl}" > /dev/null 2>&1')
+    except Exception as e:
+        print(f"\033[91m{e}\033[0m")
+
+
+if prompt == "!nasa":
+    get_nasa_apod()
+    raise  # 用raise表示continue，不继续往下
+
+
+"""
+实际外部结构：
+while True:
+    ...
+    prompt = input()
+    ...
+    try:
+        exec(plugin)  # 此文件在这个位置用exec()执行，仅raise可触发continue
+    except:
+        continue
+    继续后面的主程序...
+"""
+```
+<br>
+<br>
+
+# 答疑
+**90%的问题都是由于[权限]和[省电策略]**  
+**确保相关应用打开`自启动`，省电策略设为`无限制`，确保后台稳定运行**  
+
+#### 安装问题
+- 安装时 **[▷ 回车继续]** 之后出现
+```text
+tar: MOSS.tar.gz: Cannot open: No such file or directory
+```
+原因：`.../Document/`里找不到`MOSS.tar.gz`文件  
+请确保`MOSS.tar.gz`在`Documents`里，完整路径是`/storage/emulated/0/Documents/MOSS.tar.gz`  
+检查 [**安装步骤第1步**](#安装步骤)
+
+---
+
+#### 桌面小部件启动问题
+- 刷新桌面小部件没反应
+- 点击无法快捷启动
+
+原因： **Termux:Widget权限不足**  
+检查 [**安装步骤第3步**](#安装步骤)  
+或打开 **Termux** ，点击右下角 **MOSS** 启动
+
+---
+
+#### 卡在启动 或 输入任何内容无响应
+- 使用指令没反应，之后输入任何内容都无反应  
+- 或启动时卡在以下信息
+```bash
+Starting service: Intent { cmp=com.termux.api/.KeepAliveService }
+Error: Not found; no service started.
+或
+Starting service: Intent { cmp=com.termux.api/.KeepAliveService }
+Error: Unable to launch app com.termux.api/10361 for service Intent { cmp=com.termux.api/.KeepAliveService }: process is bad
+```
+原因： **Termux\:API** 服务没有正常运行  
+1. 去 **应用管理** 找到 **Termux\:API**，打开它的`自启动`，把 **Termux** 的省电策略设为`无限制`  
+2. 然后在 **Termux** 执行以下命令（不是在MOSS程序里执行）：
+```bash
+termux-api-start
+```
+若只出现`Starting service: Intent { cmp=com.termux.api/.KeepAliveService }`则说明成功
+
+---
+
+#### Autox无障碍服务
+- Autox的 **无障碍服务** 是开着的，仍然提示开启无障碍服务  
+
+重新**关-开**一次 **无障碍服务**
+
+---
+
+#### Autox收不到后台消息
+原因： **权限没给够**  
+打开 **Autox**，点左上角展开侧边栏，打开所需权限：  
+**无障碍服务、通知读取权限、前台服务、发送通知权限、悬浮窗**  
+
+---
+
+#### Autox不识别QQ聊天界面消息
+原因： **QQ版本不对**  
+以启动`消息自动化`脚本时显示的QQ版本为准，一般是最新版，请升级QQ
+
+---
+
+#### Autox息屏收不到消息
+原因： **消息通知被系统省电策略限制**  
+将QQ的省电策略设为`无限制`，打开`自启动`，关闭手机的`省电模式`
